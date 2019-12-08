@@ -11,5 +11,20 @@
 
     <artifactId>gmall-api</artifactId>
 
+    <!--导入后来公共使用的包-->
+    <dependencies>
+        <dependency>
+            <groupId>com.ryan.gmall</groupId>
+            <artifactId>gmall-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

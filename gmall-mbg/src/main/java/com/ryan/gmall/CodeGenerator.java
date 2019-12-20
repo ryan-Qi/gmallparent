@@ -23,7 +23,7 @@ public class CodeGenerator {
 
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir("C:\\Users\\userer\\IdeaProjects\\gmallparent\\gmall-mbg"+"/src/main/java");
+        gc.setOutputDir("C:\\Users\\ryan\\IdeaProjects\\gmallparent\\gmall-mbg"+"/src/main/java");
         gc.setAuthor("ryan");
         gc.setOpen(false);
         gc.setFileOverride(false);

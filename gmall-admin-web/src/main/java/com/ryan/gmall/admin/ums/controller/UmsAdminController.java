@@ -24,6 +24,7 @@ import java.util.Map;
 /**
  * 后台用户管理
  */
+@CrossOrigin
 @RestController
 @Api(tags = "AdminController", description = "后台用户管理")
 @RequestMapping("/admin")
@@ -53,7 +54,6 @@ public class UmsAdminController {
         //去数据库登陆
         Admin admin = adminService.login(umsAdminLoginParam.getUsername(), umsAdminLoginParam.getPassword());
 
-        Admin admin = null;
         //登陆成功生成token，此token携带基本用户信息，以后就不用去数据库了
         String token = jwtTokenUtil.generateToken(admin);
         if (token == null) {
@@ -94,9 +94,14 @@ public class UmsAdminController {
     @ResponseBody
     public Object getAdminInfo(HttpServletRequest request) {
         String oldToken = request.getHeader(tokenHeader);
-        String userName = jwtTokenUtil.getUserNameFromToken(oldToken);
+        String userName = jwtTokenUtil.getUserNameFromToken(oldToken.substring(tokenHead.length()));
 
-        Admin umsAdmin = adminService.getOne(new QueryWrapper<Admin>().eq("username",userName));
+        //1.getOne是mybatis-plus生成的，而且带了泛型
+        //2.dubbo没办法直接调用mp中带泛型的service
+        //3.实战经验：
+        //mp自动生成有可能有兼容问题，最好不要远程调用
+        //Admin umsAdmin = adminService.getOne(new QueryWrapper<Admin>().eq("username",userName));
+        Admin umsAdmin = adminService.getUserInfo(userName);
         Map<String, Object> data = new HashMap<>();
         data.put("username", umsAdmin.getUsername());
         data.put("roles", new String[]{"TEST"});

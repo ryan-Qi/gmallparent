@@ -1,14 +1,13 @@
 package com.ryan.gmall.admin.pms.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.ryan.gmall.admin.pms.vo.PmsProductParam;
-import com.ryan.gmall.admin.pms.vo.PmsProductQueryParam;
+import com.ryan.gmall.vo.PageInfoVo;
+import com.ryan.gmall.vo.PmsProductParam;
+import com.ryan.gmall.vo.PmsProductQueryParam;
 import com.ryan.gmall.pms.service.ProductService;
 import com.ryan.gmall.to.CommonResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +16,7 @@ import java.util.List;
 /**
  * 商品管理Controller
  */
+@CrossOrigin
 @RestController
 @Api(tags = "PmsProductController", description = "商品管理")
 @RequestMapping("/product")
@@ -52,6 +52,8 @@ public class PmsProductController {
                           @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
                           @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
         //TODO 查询商品
+        PageInfoVo pageInfoVo = productService.productPageInfo(productQueryParam);
+
         return new CommonResult().success(null);
     }
 

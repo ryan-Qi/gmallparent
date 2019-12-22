@@ -1,11 +1,9 @@
 package com.ryan.gmall.admin.pms.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.ryan.gmall.admin.pms.vo.PmsBrandParam;
-import com.ryan.gmall.pms.entity.Brand;
+import com.ryan.gmall.vo.PmsBrandParam;
 import com.ryan.gmall.pms.service.BrandService;
 import com.ryan.gmall.to.CommonResult;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.BindingResult;

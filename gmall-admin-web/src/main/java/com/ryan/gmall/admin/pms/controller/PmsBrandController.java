@@ -1,6 +1,7 @@
 package com.ryan.gmall.admin.pms.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.ryan.gmall.vo.PageInfoVo;
 import com.ryan.gmall.vo.PmsBrandParam;
 import com.ryan.gmall.pms.service.BrandService;
 import com.ryan.gmall.to.CommonResult;
@@ -15,6 +16,7 @@ import java.util.List;
 /**
  * 品牌功能Controller
  */
+@CrossOrigin
 @RestController
 @Api(tags = "PmsBrandController",description = "商品品牌管理")
 @RequestMapping("/brand")
@@ -69,9 +71,9 @@ public class PmsBrandController {
         CommonResult commonResult = new CommonResult();
 
         //TODO 根据品牌名称分页获取品牌列表
+        PageInfoVo vo = brandService.brandPageInfo(keyword,pageNum,pageSize);
 
-
-        return commonResult;
+        return commonResult.success(vo);
     }
 
     @ApiOperation(value = "根据编号查询品牌信息")

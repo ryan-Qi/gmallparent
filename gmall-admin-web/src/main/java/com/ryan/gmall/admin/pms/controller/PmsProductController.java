@@ -48,13 +48,10 @@ public class PmsProductController {
 
     @ApiOperation("查询商品")
     @GetMapping(value = "/list")
-    public Object getList(PmsProductQueryParam productQueryParam,
-                          @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
-                          @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
-        //TODO 查询商品
+    public Object getList(PmsProductQueryParam productQueryParam) {
         PageInfoVo pageInfoVo = productService.productPageInfo(productQueryParam);
 
-        return new CommonResult().success(null);
+        return new CommonResult().success(pageInfoVo);
     }
 
     @ApiOperation("根据商品名称或货号模糊查询")

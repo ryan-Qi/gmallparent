@@ -48,6 +48,7 @@ public class UmsAdminController {
         Admin admin = null;
         //umsAdminParam.getUsername()
         //TODO 完成注册功能
+        log.debug("需要注册的用户详情：{}",umsAdminParam);
 
         return new CommonResult().success(admin);
     }

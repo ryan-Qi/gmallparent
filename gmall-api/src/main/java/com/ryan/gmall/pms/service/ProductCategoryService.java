@@ -2,6 +2,9 @@ package com.ryan.gmall.pms.service;
 
 import com.ryan.gmall.pms.entity.ProductCategory;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.ryan.gmall.vo.PmsProductCategoryWithChildrenItem;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ProductCategoryService extends IService<ProductCategory> {
 
+    /**
+     * 查询菜单和子菜单
+     * @param i
+     * @return
+     */
+    List<PmsProductCategoryWithChildrenItem> listCatelogWithChildren(Integer i);
 }

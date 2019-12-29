@@ -4,6 +4,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.ryan.gmall.vo.PmsProductCategoryParam;
 import com.ryan.gmall.pms.service.ProductCategoryService;
 import com.ryan.gmall.to.CommonResult;
+import com.ryan.gmall.vo.PmsProductCategoryWithChildrenItem;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.validation.BindingResult;
@@ -81,7 +82,8 @@ public class PmsProductCategoryController {
     @ApiOperation("查询所有一级分类及子分类[有难度]")
     @GetMapping(value = "/list/withChildren")
     public Object listWithChildren() {
-        //TODO 查询所有一级分类及子分类
+        //TODO 查询所有一级分类及子分类,查询任意菜单及他下面的所有子菜单
+        List<PmsProductCategoryWithChildrenItem> items = productCategoryService.listCatelogWithChildren(0);
         return new CommonResult().success(null);
     }
 }

@@ -5,6 +5,7 @@ import com.ryan.gmall.pms.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
 
 @SpringBootTest
 class GmallPmsApplicationTests {
@@ -12,6 +13,9 @@ class GmallPmsApplicationTests {
     @Autowired
     ProductService productService;
 
+
+    @Autowired
+    StringRedisTemplate redisTemplate;
 
     @Test
     void contextLoads() {

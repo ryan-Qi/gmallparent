@@ -84,6 +84,6 @@ public class PmsProductCategoryController {
     public Object listWithChildren() {
         //TODO 查询所有一级分类及子分类,查询任意菜单及他下面的所有子菜单
         List<PmsProductCategoryWithChildrenItem> items = productCategoryService.listCatelogWithChildren(0);
-        return new CommonResult().success(null);
+        return new CommonResult().success(items);
     }
 }

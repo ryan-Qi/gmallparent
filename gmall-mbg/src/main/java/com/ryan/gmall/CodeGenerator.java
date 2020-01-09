@@ -17,7 +17,7 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
  */
 public class CodeGenerator {
     public static void main(String[] args) {
-        String moduleName = "ums";
+        String moduleName = "pms";
 
         AutoGenerator mpg = new AutoGenerator();
 
@@ -32,6 +32,7 @@ public class CodeGenerator {
         gc.setDateType(DateType.ONLY_DATE);
         gc.setSwagger2(true);
         gc.setBaseColumnList(true);
+        gc.setBaseResultMap(true); //生成每个xml的baseResultMap
 
         mpg.setGlobalConfig(gc);
 

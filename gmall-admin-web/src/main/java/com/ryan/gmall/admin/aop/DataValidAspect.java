@@ -18,7 +18,7 @@ public class DataValidAspect {
      * @param point
      * @return
      */
-    @Around("execution(* com.ryan.gmall.admin..*Controller.*(..))")
+    //@Around("execution(* com.ryan.gmall.admin..*Controller.*(..))")
     public Object validAround(ProceedingJoinPoint point) {
         Object proceed = null;
         try {

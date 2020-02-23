@@ -19,9 +19,18 @@ class GmallPmsApplicationTests {
 
     @Test
     void contextLoads() {
-       Product byId = productService.getById(1);
+        Product byId = productService.getById(1);
 
-       System.out.println();
+        System.out.println();
+    }
+
+    @Test
+    public void redisTemplate() {
+        redisTemplate.opsForValue().set("hello", "world");
+        System.out.println("保存了数据");
+
+        String hello = redisTemplate.opsForValue().get("hello");
+        System.out.println("刚才保存的数据是：" + hello);
     }
 
 }

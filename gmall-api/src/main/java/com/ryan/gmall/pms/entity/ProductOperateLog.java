@@ -1,12 +1,17 @@
 package com.ryan.gmall.pms.entity;
 
 import java.math.BigDecimal;
+
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -15,7 +20,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author ryan
@@ -25,7 +30,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("pms_product_operate_log")
-@ApiModel(value="ProductOperateLog对象", description="")
+@ApiModel(value = "ProductOperateLog对象", description = "")
 public class ProductOperateLog implements Serializable {
 
     private static final long serialVersionUID = 1L;

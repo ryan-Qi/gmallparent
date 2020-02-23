@@ -4,7 +4,8 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, first_letter, sort, factory_status, show_status, product_count, product_comment_count, logo, big_pic, brand_story
+        id, name, first_letter, sort, factory_status, show_status, product_count, product_comment_count, logo, big_pic,
+        brand_story
     </sql>
 
 </mapper>

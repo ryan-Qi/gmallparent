@@ -7,4 +7,23 @@
         id, product_id, product_attribute_id, value
     </sql>
 
+    <!--List<EsProductAttributeValue> selectProductBaseAttrAndValue(Long id);-->
+    <select id="selectProductBaseAttrAndValue" resultType="com.ryan.gmall.to.es.EsProductAttributeValue">
+        select pav.*,pa.name,pa.`type` from pms_product_attribute_value pav
+        left join pms_product_attribute pa
+        on pa.id=pav.product_attribute_id
+        where pav.`product_id`=#{id} and pa.`type`=1
+    </select>
+    <!--List<ProductAttribute> selectProductSaleAttrName(Long id);-->
+    <select id="selectProductSaleAttrName" resultType="com.ryan.gmall.pms.entity.ProductAttribute">
+        select pa.* from pms_product_attribute pa
+        where pa.`product_attribute_category_id` =
+        (
+        SELECT pa.`product_attribute_category_id` FROM pms_product_attribute_value pav
+        LEFT JOIN pms_product_attribute pa
+        ON pa.id=pav.product_attribute_id
+        WHERE pav.`product_id`=#{id} AND pa.`type`=0 LIMIT 1
+        ) and pa.`type`=0 order by pa.`sort` desc
+    </select>
+
 </mapper>

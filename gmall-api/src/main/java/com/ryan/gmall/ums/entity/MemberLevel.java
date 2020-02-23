@@ -1,11 +1,14 @@
 package com.ryan.gmall.ums.entity;
 
 import java.math.BigDecimal;
+
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -24,7 +27,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("ums_member_level")
-@ApiModel(value="MemberLevel对象", description="会员等级表")
+@ApiModel(value = "MemberLevel对象", description = "会员等级表")
 public class MemberLevel implements Serializable {
 
     private static final long serialVersionUID = 1L;

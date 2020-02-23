@@ -2,10 +2,14 @@ package com.ryan.gmall.pms.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -24,7 +28,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("pms_comment_replay")
-@ApiModel(value="CommentReplay对象", description="产品评价回复表")
+@ApiModel(value = "CommentReplay对象", description = "产品评价回复表")
 public class CommentReplay implements Serializable {
 
     private static final long serialVersionUID = 1L;

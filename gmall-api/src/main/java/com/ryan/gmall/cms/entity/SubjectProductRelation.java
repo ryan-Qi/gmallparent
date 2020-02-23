@@ -4,7 +4,9 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -23,7 +25,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("cms_subject_product_relation")
-@ApiModel(value="SubjectProductRelation对象", description="专题商品关系表")
+@ApiModel(value = "SubjectProductRelation对象", description = "专题商品关系表")
 public class SubjectProductRelation implements Serializable {
 
     private static final long serialVersionUID = 1L;

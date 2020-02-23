@@ -13,7 +13,6 @@ import java.util.List;
 public class PmsProductCategoryWithChildrenItem extends ProductCategory implements Serializable {
 
 
-
     private List<ProductCategory> children;
 
 }

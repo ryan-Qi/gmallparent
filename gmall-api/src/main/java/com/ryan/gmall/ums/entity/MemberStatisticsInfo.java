@@ -1,12 +1,17 @@
 package com.ryan.gmall.ums.entity;
 
 import java.math.BigDecimal;
+
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -25,7 +30,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("ums_member_statistics_info")
-@ApiModel(value="MemberStatisticsInfo对象", description="会员统计信息")
+@ApiModel(value = "MemberStatisticsInfo对象", description = "会员统计信息")
 public class MemberStatisticsInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;

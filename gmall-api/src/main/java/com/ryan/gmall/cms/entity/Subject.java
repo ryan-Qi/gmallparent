@@ -2,10 +2,14 @@ package com.ryan.gmall.cms.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -24,7 +28,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("cms_subject")
-@ApiModel(value="Subject对象", description="专题表")
+@ApiModel(value = "Subject对象", description = "专题表")
 public class Subject implements Serializable {
 
     private static final long serialVersionUID = 1L;

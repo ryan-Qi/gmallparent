@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 @Data
 public class PmsBrandParam implements Serializable {
-    @ApiModelProperty(value = "品牌名称",required = true)
+    @ApiModelProperty(value = "品牌名称", required = true)
     @NotEmpty(message = "名称不能为空")
     private String name;
     @ApiModelProperty(value = "品牌首字母")
@@ -24,7 +24,7 @@ public class PmsBrandParam implements Serializable {
     private Integer factoryStatus;
     @ApiModelProperty(value = "是否进行显示")
     private Integer showStatus;
-    @ApiModelProperty(value = "品牌logo",required = true)
+    @ApiModelProperty(value = "品牌logo", required = true)
     @NotEmpty(message = "品牌logo不能为空")
     private String logo;
     @ApiModelProperty(value = "品牌大图")

@@ -32,15 +32,15 @@ public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements
     public PageInfoVo brandPageInfo(String keyword, Integer pageNum, Integer pageSize) {
         QueryWrapper<Brand> name = null;
 
-        if(!StringUtils.isEmpty(keyword)) {
+        if (!StringUtils.isEmpty(keyword)) {
             name = new QueryWrapper<Brand>().like("name", keyword);
         }
 
         IPage<Brand> brandIPage = brandMapper.selectPage(new Page<>(pageNum.longValue(), pageSize.longValue()), name);
 
 
-        PageInfoVo pageInfoVo = new PageInfoVo(brandIPage.getTotal(),brandIPage.getPages(),
-                pageSize.longValue(),brandIPage.getRecords(),brandIPage.getCurrent());
+        PageInfoVo pageInfoVo = new PageInfoVo(brandIPage.getTotal(), brandIPage.getPages(),
+                pageSize.longValue(), brandIPage.getRecords(), brandIPage.getCurrent());
 
         return pageInfoVo;
     }

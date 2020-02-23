@@ -2,10 +2,14 @@ package com.ryan.gmall.sms.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -24,7 +28,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("sms_coupon_history")
-@ApiModel(value="CouponHistory对象", description="优惠券使用、领取历史表")
+@ApiModel(value = "CouponHistory对象", description = "优惠券使用、领取历史表")
 public class CouponHistory implements Serializable {
 
     private static final long serialVersionUID = 1L;

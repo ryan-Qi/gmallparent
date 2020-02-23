@@ -1,11 +1,14 @@
 package com.ryan.gmall.sms.entity;
 
 import java.math.BigDecimal;
+
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -24,7 +27,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("sms_flash_promotion_product_relation")
-@ApiModel(value="FlashPromotionProductRelation对象", description="商品限时购与商品关系表")
+@ApiModel(value = "FlashPromotionProductRelation对象", description = "商品限时购与商品关系表")
 public class FlashPromotionProductRelation implements Serializable {
 
     private static final long serialVersionUID = 1L;

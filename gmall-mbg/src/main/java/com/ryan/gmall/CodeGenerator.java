@@ -23,7 +23,7 @@ public class CodeGenerator {
 
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir("C:\\Users\\ryan\\IdeaProjects\\gmallparent\\gmall-mbg"+"/src/main/java");
+        gc.setOutputDir("C:\\Users\\ryan\\IdeaProjects\\gmallparent\\gmall-mbg" + "/src/main/java");
         gc.setAuthor("ryan");
         gc.setOpen(false);
         gc.setFileOverride(false);
@@ -37,7 +37,7 @@ public class CodeGenerator {
         mpg.setGlobalConfig(gc);
 
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://47.240.50.2:3307/gmall_"+moduleName+"?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://47.240.50.2:3307/gmall_" + moduleName + "?useUnicode=true&useSSL=false&characterEncoding=utf8");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("root");

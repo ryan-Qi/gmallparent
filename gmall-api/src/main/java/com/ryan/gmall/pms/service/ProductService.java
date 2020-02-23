@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.ryan.gmall.vo.PageInfoVo;
 import com.ryan.gmall.vo.PmsProductQueryParam;
 
+import java.util.List;
+
 /**
  * <p>
  * 商品信息 服务类
@@ -16,9 +18,22 @@ import com.ryan.gmall.vo.PmsProductQueryParam;
 public interface ProductService extends IService<Product> {
 
     /**
-     *
+     * 查询商品的详情
+     * @param id
+     * @return
+     */
+    Product productInfo(Long id);
+
+    /**
      * @param productQueryParam
      * @return
      */
     PageInfoVo productPageInfo(PmsProductQueryParam productQueryParam);
+
+    /**
+     * 批量上下架
+     * @param ids
+     * @param publishStatus
+     */
+    void updatePublishStatus(List<Long> ids, Integer publishStatus);
 }

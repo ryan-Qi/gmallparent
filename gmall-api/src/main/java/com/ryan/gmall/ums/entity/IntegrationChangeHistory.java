@@ -2,10 +2,14 @@ package com.ryan.gmall.ums.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -24,7 +28,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("ums_integration_change_history")
-@ApiModel(value="IntegrationChangeHistory对象", description="积分变化历史记录表")
+@ApiModel(value = "IntegrationChangeHistory对象", description = "积分变化历史记录表")
 public class IntegrationChangeHistory implements Serializable {
 
     private static final long serialVersionUID = 1L;

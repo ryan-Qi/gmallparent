@@ -15,7 +15,7 @@ import java.util.List;
 public class PmsProductCategoryParam implements Serializable {
     @ApiModelProperty("父分类的编号")
     private Long parentId;
-    @ApiModelProperty(value = "商品分类名称",required = true)
+    @ApiModelProperty(value = "商品分类名称", required = true)
     @NotEmpty(message = "商品分类名称不能为空")
     private String name;
     @ApiModelProperty("分类单位")
@@ -25,7 +25,7 @@ public class PmsProductCategoryParam implements Serializable {
     @ApiModelProperty("是否进行显示")
     private Integer showStatus;
     @ApiModelProperty("排序")
-    @Min(value = 0,message = "排序最小为0")
+    @Min(value = 0, message = "排序最小为0")
     private Integer sort;
     @ApiModelProperty("图标")
     private String icon;

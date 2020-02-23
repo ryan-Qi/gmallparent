@@ -4,7 +4,8 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, product_id, price_old, price_new, sale_price_old, sale_price_new, gift_point_old, gift_point_new, use_point_limit_old, use_point_limit_new, operate_man, create_time
+        id, product_id, price_old, price_new, sale_price_old, sale_price_new, gift_point_old, gift_point_new,
+        use_point_limit_old, use_point_limit_new, operate_man, create_time
     </sql>
 
 </mapper>

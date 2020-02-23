@@ -2,10 +2,14 @@ package com.ryan.gmall.ums.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -24,7 +28,7 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("ums_member_login_log")
-@ApiModel(value="MemberLoginLog对象", description="会员登录记录")
+@ApiModel(value = "MemberLoginLog对象", description = "会员登录记录")
 public class MemberLoginLog implements Serializable {
 
     private static final long serialVersionUID = 1L;
